@@ -281,6 +281,74 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .p5_g2         = GPIO_BIT(44),
     .p5_b2         = GPIO_BIT(45),
   },
+
+  /*
+   * Custom pin-out for fair2media compute-module IO Board
+   */
+  {
+    .name          = "fair2media",
+
+    /* This GPIO mapping for 6 parallel chains.
+     * GPIO 0 and GPIO 6 are not used as they are reserved for on-board led control and LAN9512 reset control respectively.
+     */
+    .output_enable = GPIO_BIT(30),
+    .clock         = GPIO_BIT(31),
+    .strobe        = GPIO_BIT(28),
+
+    .a             = GPIO_BIT(16),
+    .b             = GPIO_BIT(17),
+    .c             = GPIO_BIT(9),
+    .d             = GPIO_BIT(8),
+    .e             = GPIO_BIT(29),
+
+    /* Chain 0 */
+    .p0_r1         = GPIO_BIT(44),
+    .p0_g1         = GPIO_BIT(45),
+    .p0_b1         = GPIO_BIT(24),
+    .p0_r2         = GPIO_BIT(26),
+    .p0_g2         = GPIO_BIT(25),
+    .p0_b2         = GPIO_BIT(27),
+
+    /* Chain 1 */
+    .p1_r1         = GPIO_BIT(38),
+    .p1_g1         = GPIO_BIT(39),
+    .p1_b1         = GPIO_BIT(40),
+    .p1_r2         = GPIO_BIT(41),
+    .p1_g2         = GPIO_BIT(42),
+    .p1_b2         = GPIO_BIT(43),
+
+    /* Chain 2 */
+    .p2_r1         = GPIO_BIT(35),
+    .p2_g1         = GPIO_BIT(37),
+    .p2_b1         = GPIO_BIT(34),
+    .p2_r2         = GPIO_BIT(33),
+    .p2_g2         = GPIO_BIT(36),
+    .p2_b2         = GPIO_BIT(32),
+
+    /* Chain 3 */
+    .p3_r1         = GPIO_BIT(20),
+    .p3_g1         = GPIO_BIT(18),
+    .p3_b1         = GPIO_BIT(21),
+    .p3_r2         = GPIO_BIT(22),
+    .p3_g2         = GPIO_BIT(19),
+    .p3_b2         = GPIO_BIT(23),
+
+    /* Chain 4 */
+    .p4_r1         = GPIO_BIT(10),
+    .p4_g1         = GPIO_BIT(11),
+    .p4_b1         = GPIO_BIT(12),
+    .p4_r2         = GPIO_BIT(14),
+    .p4_g2         = GPIO_BIT(13),
+    .p4_b2         = GPIO_BIT(15),
+
+    /* Chain 5 */
+    .p5_r1         = GPIO_BIT(1),
+    .p5_g1         = GPIO_BIT(2),
+    .p5_b1         = GPIO_BIT(3),
+    .p5_r2         = GPIO_BIT(5),
+    .p5_g2         = GPIO_BIT(4),
+    .p5_b2         = GPIO_BIT(7),
+  },
 #endif
 
   {0}

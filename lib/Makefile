@@ -34,7 +34,7 @@ TARGET=librgbmatrix
 #   regular-pi1        # If you have an old Pi1 and regular didn't work.
 #   classic            # (deprecated) Classic Pi1/2/. Not used anymore.
 #   classic-pi1        # (deprecated) Classic pinout on Rasperry Pi 1
-HARDWARE_DESC?=regular
+HARDWARE_DESC?=fair2media
 
 # If you see that your display is inverse, you might have a matrix variant
 # has uses inverse logic for the RGB bits. In that case: uncomment this.
@@ -135,7 +135,7 @@ HARDWARE_DESC?=regular
 # So only switch this on if you really use the compute module and use more
 # than 3 parallel chains.
 # (this is untested right now, waiting for hardware to arrive for testing)
-#DEFINES+=-DENABLE_WIDE_GPIO_COMPUTE_MODULE
+DEFINES+=-DENABLE_WIDE_GPIO_COMPUTE_MODULE
 
 # ---- Pinout options for hardware variants; usually no change needed here ----
 
